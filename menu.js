@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readline from 'readline';
 import dotenv from 'dotenv';
 import addContact from './commands/add.js';
