@@ -17,7 +17,7 @@ const rl = readline.createInterface({
 });
 
 function showMenu() {
-  console.log(chalk.blueBright('\n📇 Welcome to Contact Manager!'));
+  console.log(chalk.blueBright('\n Welcome to Contact Manager!'));
   console.log('1. Add Contact');
   console.log('2. Delete Contact');
   console.log('3. Update Contact');
@@ -47,17 +47,17 @@ function showMenu() {
         await promptAssignGroup();
         break;
       case '7':
-        console.log(chalk.green('\n👋 Exiting. Goodbye!'));
+        console.log(chalk.green('\n Exiting. Goodbye!'));
         rl.close();
         return;
       default:
-        console.log(chalk.red('❌ Invalid option.'));
+        console.log(chalk.red(' Invalid option.'));
     }
     showMenu();
   });
 }
 
-// 🟢 Prompt wrappers
+// Prompt wrappers
 
 async function promptAddContact() {
   const options = {};
@@ -99,7 +99,7 @@ async function promptAssignGroup() {
   await assignGroup(options);
 }
 
-// 🔁 Wrapper for readline questions
+//  Wrapper for readline questions
 function ask(question, handler) {
   return new Promise(resolve => {
     rl.question(chalk.cyan(question), answer => {
@@ -109,5 +109,5 @@ function ask(question, handler) {
   });
 }
 
-// 🎬 Start app
+//  Start app
 showMenu();
