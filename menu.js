@@ -99,7 +99,7 @@ async function promptAssignGroup() {
   await assignGroup(options);
 }
 
-//  Wrapper for readline questions
+// Wrapper for readline questions
 function ask(question, handler) {
   return new Promise(resolve => {
     rl.question(chalk.cyan(question), answer => {
@@ -109,5 +109,5 @@ function ask(question, handler) {
   });
 }
 
-//  Start app
+// Start app
 showMenu();
