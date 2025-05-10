@@ -61,4 +61,11 @@ program
   .requiredOption('--group <group>', 'Group name')
   .action(assignGroup);
 
-program.parse();
+program.parse(process.argv);
+
+  // If no command is passed, show interactive menu
+  if (!process.argv.slice(2).length) {
+    const { spawn } = await import('child_process');
+    spawn('node', ['menu.js'], { stdio: 'inherit' });
+  }
+  

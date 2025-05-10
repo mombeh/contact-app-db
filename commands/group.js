@@ -7,7 +7,7 @@ export default async function assignGroup(options) {
 
   try {
     await db.query(
-      `UPDATE contacts SET "group" = $1, WHERE id = $2`,
+      `UPDATE contacts SET "group" = $1, WHERE id = $2`
       [group, id]
     );
 
